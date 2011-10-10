@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{oembed_client}
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Brian Landau}]
@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
     "oembed_client.gemspec",
     "test/fixtures/vcr_cassettes/flickr_response.yml",
     "test/fixtures/vcr_cassettes/response.yml",
+    "test/fixtures/vcr_cassettes/youtube_bad_response.yml",
     "test/fixtures/vcr_cassettes/youtube_response.yml",
     "test/helper.rb",
     "test/test_oembed_client.rb"
