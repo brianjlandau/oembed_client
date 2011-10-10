@@ -13,7 +13,7 @@ class TestOembedClient < Test::Unit::TestCase
       VCR.eject_cassette
     end
     
-    context 'for existing YouTube client' do
+    context 'for existing YouTube client with good response' do
       setup do
         VCR.insert_cassette('youtube_response')
         @client = YoutubeOembedClient.new('http://www.youtube.com/watch?v=4r7wHMg5Yjg')
@@ -39,6 +39,32 @@ class TestOembedClient < Test::Unit::TestCase
           @client.embed_html
       end
 
+      teardown do
+        VCR.eject_cassette
+      end
+    end
+    
+    context 'for existing YouTube client with bad response' do
+      setup do
+        VCR.insert_cassette('youtube_bad_response')
+        @client = YoutubeOembedClient.new('http://www.youtube.com/bogus')
+      end
+      
+      should 'correctly report that it is not any type' do
+        assert !@client.video?
+        assert !@client.photo?
+        assert !@client.link?
+        assert !@client.rich?
+      end
+      
+      should 'return nil for embed html' do
+        assert_nil @client.embed_html
+      end
+      
+      should 'return nil for title' do
+        assert_nil @client.title
+      end
+      
       teardown do
         VCR.eject_cassette
       end

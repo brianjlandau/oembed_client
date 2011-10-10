@@ -57,6 +57,8 @@ class OembedClient
   
   def json
     @json ||= MultiJson.decode(response)
+  rescue
+    @json = {}
   end
   
   def embed_html
@@ -64,7 +66,7 @@ class OembedClient
   end
   
   def embed_url
-    json['html']
+    json['url']
   end
   
   %w(photo video link rich).each do |embed_type|
