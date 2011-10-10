@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "lib/oembed_client.rb",
+    "oembed_client.gemspec",
     "test/fixtures/vcr_cassettes/flickr_response.yml",
     "test/fixtures/vcr_cassettes/response.yml",
     "test/fixtures/vcr_cassettes/youtube_response.yml",
