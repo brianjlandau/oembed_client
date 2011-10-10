@@ -6,8 +6,8 @@ class OembedClient
   attr_reader :url
   
   STANDARD_RESPONSE_PARAMS = %w(type version title author_name author_url provider_name
-   provider_url cache_age thumbnail_url thumbnail_width thumbnail_height
-   url width height)
+    provider_url cache_age thumbnail_url thumbnail_width thumbnail_height
+    width height)
   
   class << self
     def create_client_class_for(url)
@@ -60,6 +60,10 @@ class OembedClient
   end
   
   def embed_html
+    json['html']
+  end
+  
+  def embed_url
     json['html']
   end
   

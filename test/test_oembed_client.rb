@@ -8,7 +8,7 @@ class TestOembedClient < Test::Unit::TestCase
       OembedClient::Flickr.ancestors.include?(OembedClient)
       assert_equal 'http://www.flickr.com/services/oembed', OembedClient::Flickr.base_url
       c = OembedClient::Flickr.new('http://www.flickr.com/photos/brianlandau/6173724585/in/photostream')
-      assert_equal 'http://farm7.static.flickr.com/6174/6173724585_8a984a740b.jpg', c.url
+      assert_equal 'http://farm7.static.flickr.com/6174/6173724585_8a984a740b.jpg', c.embed_url
       assert c.photo?
       VCR.eject_cassette
     end
