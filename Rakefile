@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "oembed_client"
   gem.homepage = "http://github.com/brianjlandau/oembed_client"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{A simple abstract oEmbed Client for ruby.}
+  gem.description = %Q{A simple abstract oEmbed Client for ruby.}
   gem.email = "brianjlandau@gmail.com"
   gem.authors = ["Brian Landau"]
   # dependencies defined in Gemfile
@@ -38,16 +38,9 @@ Rcov::RcovTask.new do |test|
   test.pattern = 'test/**/test_*.rb'
   test.verbose = true
   test.rcov_opts << '--exclude "gems/*"'
+  test.rcov_opts << '--sort coverage'
+  test.rcov_opts << '--only-uncovered'
 end
 
 task :default => :test
 
-require 'rake/rdoctask'
-Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
-
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "oembed_client #{version}"
-  rdoc.rdoc_files.include('README*')
-  rdoc.rdoc_files.include('lib/**/*.rb')
-end

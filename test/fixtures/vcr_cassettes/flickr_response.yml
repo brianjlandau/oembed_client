@@ -1,0 +1,44 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://www.flickr.com:80/services/oembed?format=json&url=http://www.flickr.com/photos/brianlandau/6173724585/in/photostream
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Mon, 10 Oct 2011 03:32:50 GMT
+      p3p:
+      - policyref="http://p3p.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE GOV"
+      set-cookie:
+      - localization=en-us%3Bus%3Bus; expires=Mon, 07-Oct-2013 03:32:50 GMT; path=/;
+        domain=.flickr.com
+      cache-control:
+      - private
+      x-served-by:
+      - www125.flickr.mud.yahoo.com
+      vary:
+      - Accept-Encoding
+      content-type:
+      - application/json
+      age:
+      - '0'
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      via:
+      - HTTP/1.1 r19.ycpi.mud.yahoo.net (YahooTrafficServer/1.20.4 [cMsSf ])
+      server:
+      - YTS/1.20.4
+    body: ! '{"version":"1.0","type":"photo","author_url":"http:\/\/www.flickr.com\/photos\/brianlandau\/","cache_age":3600,"provider_name":"Flickr","provider_url":"http:\/\/www.flickr.com\/","title":"IMG_3930","author_name":"Brian
+      Landau","width":"500","height":"375","url":"http:\/\/farm7.static.flickr.com\/6174\/6173724585_8a984a740b.jpg"}
+
+'
+    http_version: '1.1'
