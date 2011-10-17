@@ -21,7 +21,15 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{A simple abstract oEmbed Client for ruby.}
   gem.email = "brianjlandau@gmail.com"
   gem.authors = ["Brian Landau"]
-  # dependencies defined in Gemfile
+
+  gem.add_dependency 'multi_json', '~> 1.0'
+
+  gem.add_development_dependency "shoulda", ">= 0"
+  gem.add_development_dependency "jeweler", "~> 1.6.4"
+  gem.add_development_dependency "rcov", ">= 0"
+  gem.add_development_dependency 'webmock'
+  gem.add_development_dependency 'vcr'
+  gem.add_development_dependency 'rake'
 end
 Jeweler::RubygemsDotOrgTasks.new
 
