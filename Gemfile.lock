@@ -9,11 +9,11 @@ GEM
       git (>= 1.2.5)
       rake
     multi_json (1.0.3)
-    rake (0.9.2)
+    rake (0.9.2.2)
     rcov (0.9.11)
     shoulda (2.11.3)
     vcr (1.11.3)
-    webmock (1.7.6)
+    webmock (1.7.7)
       addressable (~> 2.2, > 2.2.5)
       crack (>= 0.1.7)
 
@@ -21,8 +21,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.0.0)
-  jeweler (~> 1.6.4)
+  bundler (~> 1.0)
+  jeweler (~> 1.6)
   multi_json
   rcov
   shoulda
